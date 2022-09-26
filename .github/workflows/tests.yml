@@ -24,4 +24,4 @@ jobs:
       - name: Test with molecule
         working-directory: ./molecule_demo
         run: |
-          molecule test
+          PY_COLORS=1 molecule test --destroy=never
