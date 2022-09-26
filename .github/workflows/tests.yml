@@ -20,6 +20,8 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip
           python3 -m pip install -r requirements.txt
+          apt-get update
+          apt-get install python3-requests
       - name: Test with molecule
         working-directory: ./molecule_demo
         run: |
