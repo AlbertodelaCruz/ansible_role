@@ -18,9 +18,11 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
+        working-directory: ./molecule_demo
         run: |
           python3 -m pip install --upgrade pip
           python3 -m pip install -r requirements.txt
       - name: Test with molecule
+        working-directory: ./molecule_demo
         run: |
           molecule test
